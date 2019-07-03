@@ -45,6 +45,10 @@ def test_rooms_from_category_method
 end
 
 def test_total_house_area_method
+  @house.add_room(@room_1)
+  @house.add_room(@room_2)
+  @house.add_room(@room_3)
+  @house.add_room(@room_4)
   assert_equal 1900, @house.area
 end
 
