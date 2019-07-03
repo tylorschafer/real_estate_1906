@@ -24,7 +24,7 @@ class House
   end
 
   def rooms_by_category
-    category_hash = Hash[@rooms.collect {|room| [*room.category, room]}]
+    category_hash = Hash[@rooms.collect { |room| [room.category, room] } ]
   end
 
 end

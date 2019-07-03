@@ -65,7 +65,12 @@ def test_rooms_by_category
   @house.add_room(@room_2)
   @house.add_room(@room_3)
   @house.add_room(@room_4)
-  assert_equal [@room_1, @room_2], @house.rooms_by_category
+  assert_instance_of Hash, @house.rooms_by_category
+  assert @house.rooms_by_category.include?(@room_1)
+  assert @house.rooms_by_category.include?(@room_2)
+  assert @house.rooms_by_category.include?(@room_3)
+  assert @house.rooms_by_category.include?(@room_4)
+  assert_equal ({@room_1.category => @room_1}), @house.rooms_by_category
 end
 
 
