@@ -20,11 +20,11 @@ def test_house_returns_price
 end
 
 def test_house_returns_address
-  assert_equal "123 sugar lane", house.address
+  assert_equal "123 sugar lane", @house.address
 end
 
 def test_rooms_returns_empty_array
-  assert_equal [], house.rooms
+  assert_equal [], @house.rooms
 end
 
 def test_add_rooms_gets_inserted_to_rooms_array
