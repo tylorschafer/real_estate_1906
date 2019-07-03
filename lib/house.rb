@@ -19,5 +19,12 @@ class House
     @rooms.map{|room| room.area}.sum
   end
 
+  def price_per_square_foot
+     (@price / area.to_f).round(2)
+  end
+
+  def rooms_by_category
+    category_hash = Hash[@rooms.collect {|room| [*room.category, room]}]
+  end
 
 end

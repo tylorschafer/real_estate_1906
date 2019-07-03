@@ -57,16 +57,15 @@ def test_price_per_square_foot
   @house.add_room(@room_2)
   @house.add_room(@room_3)
   @house.add_room(@room_4)
-  assert_equal 210.53, @house.test_price_per_square_foot
+  assert_equal 210.53, @house.price_per_square_foot
 end
 
 def test_rooms_by_category
-  skip
   @house.add_room(@room_1)
   @house.add_room(@room_2)
   @house.add_room(@room_3)
   @house.add_room(@room_4)
-  assert_equal :bedroom=>[@room_1, @room_2], @house.rooms_by_category
+  assert_equal [@room_1, @room_2], @house.rooms_by_category
 end
 
 
