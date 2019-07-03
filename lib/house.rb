@@ -11,6 +11,13 @@ class House
     @rooms << room
   end
 
+  def rooms_from_category(select)
+    @rooms.select{|room| room.category == select}
+  end
+
+  def area
+    @rooms.map{|room| room.area}.sum
+  end
 
 
 end
